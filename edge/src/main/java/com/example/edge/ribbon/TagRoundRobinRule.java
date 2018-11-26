@@ -22,7 +22,6 @@ public class TagRoundRobinRule extends ZoneAvoidanceRule {
     public AbstractServerPredicate getPredicate() {
         AbstractServerPredicate predicate = super.getPredicate();
         String requestTag = getAttribute();
-        CompositePredicate.withPredicate(predicate);
         return StringUtils.isNotEmpty(requestTag) ? CompositePredicate
             .withPredicates(predicate, new TagBasedPredicate(requestTag)).build() : predicate;
     }
