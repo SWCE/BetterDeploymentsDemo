@@ -12,7 +12,7 @@ public class TagBasedPredicate extends AbstractServerPredicate {
 
     private final String tag;
 
-    public TagBasedPredicate(String tag) {
+    TagBasedPredicate(String tag) {
         log.info("Creating predicate for tag {}", tag);
         this.tag = tag;
     }
